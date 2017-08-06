@@ -4,7 +4,7 @@
   "description": "A web piano written in cycle.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint src"
   },
   "repository": {
     "type": "git",
@@ -17,4 +17,13 @@
     "url": "https://github.com/vogelino/reactive-piano/issues"
   },
   "homepage": "https://github.com/vogelino/reactive-piano#readme"
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-vogelint-react": "^1.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0"
+  }
 }
