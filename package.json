@@ -1,0 +1,20 @@
+{
+  "name": "reactive-piano",
+  "version": "1.0.0",
+  "description": "A web piano written in cycle.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vogelino/reactive-piano.git"
+  },
+  "keywords": [],
+  "author": "Lucas Vogel <contact@vogelino.com> (http://vogelino.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vogelino/reactive-piano/issues"
+  },
+  "homepage": "https://github.com/vogelino/reactive-piano#readme"
+}
