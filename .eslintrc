@@ -1,3 +1,7 @@
 {
-    "extends": "eslint-config-vogelint-react"
+    "extends": "eslint-config-vogelint-react",
+    "rules": {
+        "react/react-in-jsx-scope": "off",
+        "no-unused-vars": ["error", { "varsIgnorePattern": "^html$" }]
+    }
 }

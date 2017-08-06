@@ -1,15 +1,21 @@
-import xs from 'xstream';
 import { run } from '@cycle/run';
-import { makeDOMDriver, h1 } from '@cycle/dom';
+import { makeDOMDriver, div, input, p } from '@cycle/dom';
+import { html } from 'snabbdom-jsx';
 import { insertRoot } from './utils/dom';
 
 insertRoot(document.body);
 
-const main = () => {
+const main = (sources) => {
 	const sinks = {
-		DOM: xs.periodic(1000).map((secondsElapsed) => (
-			h1(`${secondsElapsed} seconds elapsed`)
-		)),
+		DOM: sources.DOM.select('input').events('click')
+			.map((evt) => evt.target.checked)
+			.startWith(false)
+			.map((toggled) => (
+				<div>
+					<input type="checkbox" /> Toggle me
+					<p>{toggled ? 'on' : 'off'}</p>
+				</div>
+			)),
 	};
 
 	return sinks;
