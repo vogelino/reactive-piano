@@ -1,4 +1,4 @@
-import initialState from '../constants/pianoKeys';
+import initialState from './constants/pianoKeys';
 
 const getPianoKeysByEvent = (previousPianoKeys, { keyCode, pressed }) => {
 	const preparedPianoKeys = previousPianoKeys.map((pianoKey) => ({
