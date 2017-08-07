@@ -1,18 +1,13 @@
 import { run } from '@cycle/run';
 import { makeDOMDriver } from '@cycle/dom';
+import { makeAudioDriver } from './drivers/audioDriver';
 import { insertRoot } from './utils/dom';
 import piano from './piano';
 import './index.css';
 
 insertRoot(document.body);
 
-const main = (sources) => {
-	const { DOM } = piano(sources);
-	return { DOM };
-};
-
-const drivers = {
+run(piano, {
 	DOM: makeDOMDriver('#root'),
-};
-
-run(main, drivers);
+	audio: makeAudioDriver(),
+});
