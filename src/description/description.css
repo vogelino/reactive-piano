@@ -1,0 +1,15 @@
+.description {
+	width: 46.2em;
+	margin: 0 auto;
+	font-family: sans-serif;
+	color: white;
+}
+
+.description a {
+	color: #93edc7;
+	cursor: pointer;
+}
+
+.description a:hover {
+	color: #1cd8d2;
+}

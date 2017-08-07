@@ -6,7 +6,9 @@
   "scripts": {
     "lint": "eslint src",
     "build": "webpack",
-    "build-watch": "webpack-dev-server --progress --colors"
+    "build-watch": "webpack-dev-server --progress --colors",
+    "predeploy": "npm run build",
+    "deploy": "(cd ./public && now)"
   },
   "repository": {
     "type": "git",
@@ -18,11 +20,12 @@
   "bugs": {
     "url": "https://github.com/vogelino/reactive-piano/issues"
   },
-  "homepage": "https://github.com/vogelino/reactive-piano#readme",
+  "homepage": "https://reactive-piano.vogelino.com/",
   "dependencies": {
     "@cycle/dom": "^18.0.0",
     "@cycle/run": "^3.1.0",
     "cycle-html5-audio-driver": "^1.0.1",
+    "marked": "^0.3.6",
     "snabbdom-jsx": "^0.3.1",
     "xstream": "^10.9.0"
   },
@@ -42,6 +45,8 @@
     "eslint-plugin-react": "^7.1.0",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.30.1",
+    "now": "^7.3.0",
+    "raw-loader": "^0.5.1",
     "style-loader": "^0.18.2",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1"
