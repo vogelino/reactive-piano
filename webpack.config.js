@@ -18,6 +18,14 @@ module.exports = {
 				test: /\.css$/,
 				use: ['style-loader', 'css-loader'],
 			},
+			{
+				test: /\.(jpe?g|png|gif|svg|mp4)$/i,
+				use: 'file-loader',
+			},
+			{
+				test: /\.(ogg|mp3|wav|mpe?g)$/i,
+				use: 'file-loader',
+			},
 		],
 	},
 	devServer: {
