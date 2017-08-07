@@ -22,7 +22,7 @@
   "dependencies": {
     "@cycle/dom": "^18.0.0",
     "@cycle/run": "^3.1.0",
-    "cycle-html5-audio-driver": "^1.0.0",
+    "cycle-html5-audio-driver": "^1.0.1",
     "snabbdom-jsx": "^0.3.1",
     "xstream": "^10.9.0"
   },
